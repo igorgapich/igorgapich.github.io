@@ -1,7 +1,14 @@
 <html>
+    <script>
+        window.onload = function()
+        {
+            setinterval(clockPainting,1000);
+        }
+    </script>
     <head>
         <meta charset="utf-8">
         <title> Сайт web-студії "Web-DECO"</title>
+        <script src="js/clock1.js"></script>
         <script type="text/javascript">
             function send()
             {
@@ -58,6 +65,8 @@
             </tr>
             <tr>
             <td width="30%" valign="top" >
+                <center><canvas id="canvas" height="120" width="120"></canvas></center>
+                <hr>
                 <font size="5" color="navy"><h2>Новини</h2></font>
                     <font size="5" >
                 <ul>
@@ -69,7 +78,7 @@
                     <p align="right"><a href="#">інші...</a></p>
                 </ul>
                     </font>
-                    <hr>
+                <hr>
                     <H1 align="center"><font color="green">Реєстрація</font></H1>
                     <form action="forma.php" method="post" onsubmit="return send();">
                     <table align="center" bgcolor="#ccc">
@@ -90,11 +99,11 @@
                             <td><input type="password" size="10" maxlength="20" name="password"></td>
                         </tr>
                     </table>
-                <p align="center">
+                    <p align="center">
                     <input type="sumbit" value="Зареєструватись">
                     <input type="sumbit" value="Очистити">
-                </p>
-                </form>
+                 </p>
+                 </form>
                 <hr>
             </td>
             <td width="70%">
