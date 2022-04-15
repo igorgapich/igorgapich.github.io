@@ -111,8 +111,29 @@
                 <hr>
             </td>
             <td width="70%">
-
-
+            <h1 align="center">Список гостей !</h1>	
+<table  align="center" border="1" width="80%" style='font-size:100%'>
+        <tr>
+            <td align="center"><b>Npp</b></td>
+            <td align="center"><b>IP Address</b></td>
+            <td align="center"><b>Браузер</b></td>
+            <td align="center"><b>ДАТА</b></td>
+        </tr>
+        <?php
+        $data = file("txt/log.txt");
+        $c=1;
+        foreach ($data as $line) {
+            $trs = explode("|", $line);
+                   echo '<tr>';
+            echo '<td>'.$c.'</td>';       
+            echo '<td>'.$trs[0].'</td>';
+            echo '<td>'.$trs[1].'</td>';
+            echo '<td>'.$trs[2].'</td>';
+                   echo '</tr>';
+                   $c++;
+            }
+        ?>
+    </table>   
             </td>
             </tr>
             <tr>
